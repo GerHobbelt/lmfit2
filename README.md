@@ -1,5 +1,5 @@
 ## Levenburg-Marquardt fitting of SuperDARN auto-correlation functions (ACFs). **With NO ad hoc assumptions/conditions!**
-[As described by Reimer et. al. (2018)](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017RS006450/full).
+[As described by Reimer et. al. (2018)](https://sci-hub.ru/10.1002/2017RS006450).
 
 Fitted SuperDARN data with accurate error bars. Filter data based on fitted error:
 
@@ -9,7 +9,7 @@ Fitted SuperDARN data with accurate error bars. Filter data based on fitted erro
 Pictured above is 8 hours of fitted velocity data for the Saskatoon SuperDARN radar for none, 800 m/s, 400 m/s, 200 m/s, 100 m/s, and 50 m/s velocity error thresholds.
 
 # Summary
-This repository contains code to that can fit the SuperDARN rawacf files using an error weighted non-linear least-squares fitting algorithm called the First-Principles Fitting Methodology (FPFM). The details of this algorithm as described in [Reimer et. al. (2018)](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017RS006450/full). The real and imaginary components are fitted against a decaying complex sinusoidal model of the ACF. The Levenburg-Marquardt technique is used to minimize the chi-squared sum. No ad hoc conditions are utilized. The errors in the real and imaginary components of the ACF lag estimates are based on the work by [Reimer et. al. (2016)](http://onlinelibrary.wiley.com/doi/10.1002/2016RS005975/full). Self-clutter due to the multiple-pulse technique is accounted for using the Mean Power-based Self-clutter Estimator (MPSE) detailed in [Reimer and Hussey (2015)](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2015RS005706/full).
+This repository contains code to that can fit the SuperDARN rawacf files using an error weighted non-linear least-squares fitting algorithm called the First-Principles Fitting Methodology (FPFM). The details of this algorithm as described in [Reimer et. al. (2018)](https://sci-hub.ru/10.1002/2017RS006450). The real and imaginary components are fitted against a decaying complex sinusoidal model of the ACF. The Levenburg-Marquardt technique is used to minimize the chi-squared sum. No ad hoc conditions are utilized. The errors in the real and imaginary components of the ACF lag estimates are based on the work by [Reimer et. al. (2016)](http://onlinelibrary.wiley.com/doi/10.1002/2016RS005975/full). Self-clutter due to the multiple-pulse technique is accounted for using the Mean Power-based Self-clutter Estimator (MPSE) detailed in [Reimer and Hussey (2015)](https://sci-hub.ru/10.1002/2015RS005706).
 
 # C Code
 The C code requires [RSTLite](https://github.com/vtsuperdarn/RSTLite) to be installed (need the C dmap library and the hdw.dat files). For both this software and RSTLite you will need to have zlib-dev installed. It also utilizes the [cmpfit library](https://www.physics.wisc.edu/~craigm/idl/cmpfit.html) written by Craig B. Marquardt. The codebase has been structured in the same way as the [fitacf3.0 code](https://github.com/SuperDARNCanada/fitacf.3.0) written by Keith Kotyk.
